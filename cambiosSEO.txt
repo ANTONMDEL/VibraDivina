@@ -1,0 +1,11 @@
+Utilice meta con la descripcion de la pagina.
+
+Un meta con las palabras claves.
+
+Inclui titulos en cada uno de los html.
+
+Inclui los H1 correspondientes a cada html.
+
+En cuanto a las imagenes especifique los atributos "alt".
+
+Y utilice el atributo rel="nofollow" en las etiquetas <a>.
