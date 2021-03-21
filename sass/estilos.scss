@@ -221,10 +221,6 @@ strong {
 }
 
 /* GRILLAS BOOTSTRAP INDEX */
-/* TESTIMONIOS */
-/* VIDEOS Y LIBROS*/
-/* WhatsAPP */
-/* CURSOS */
 .container {
 	background-image: url(../img/fondoCinco.png);
 	text-align: $center;
@@ -238,6 +234,8 @@ strong {
 		box-sizing: border-box;
 	}
 }
+
+/* TESTIMONIOS */
 
 #testimonios {
 	text-align: $center;
@@ -288,6 +286,9 @@ iframe {
 .my-float {
 	margin-top: 16px;
 }
+
+
+/* CURSOS */
 
 #tituloReikiLunar {
 	text-align: $center;
@@ -356,6 +357,7 @@ iframe {
 		list-style: none;
 	}
 }
+
 /* LUNA ANIMACION*/
 @keyframes wobble {
 	0% {
@@ -515,48 +517,9 @@ iframe {
 	border-radius: .25em;
 }
 
-/*GRID*/
-/* TARJETA DE REGALO */
-.grillaDos {
-	justify-content: space-around;
 
-	p {
-		font-size: 40px;
-		font-family: fantasy;
-	}
 
-	>.header {
-		background: #fff;
-		padding: 40px;
-		border: 1px solid #000000;
-		grid-column: 1/-1;
-		background-color: #ffffff;
-		color: #1e272e;
-	}
-
-	>div {
-		background: #fff;
-		padding: 40px;
-		border: 1px solid #000000;
-	}
-
-	>.related-post {
-		background: #2d3436;
-		color: #ffffff;
-		height: 10px;
-		display: flex;
-		align-items: $center;
-		justify-content: $center;
-		transition: all 0.5s ease;
-
-		&:hover {
-			cursor: pointer;
-			color: $colorAzul;
-			background: #f7f1e3;
-		}
-	}
-}
-
+/* VIDEOS Y LIBROS*/
 .grilla {
 	display: flex;
 	flex-direction: row;
@@ -600,6 +563,9 @@ iframe {
 	
 }
 
+
+
+/* TARJETA DE REGALO */
 #regalo {
 	display: flex;
 	justify-content: flex-end;
@@ -861,8 +827,7 @@ iframe {
 	}
 }
 
-/* COLOR DE ETIQUETAS A */
-/* TESTIMONIOS */
+
 @keyframes load {
 	from {
 		left: -100%;
@@ -1818,4 +1783,4 @@ footer {
 	height: 16px;
 	display: inline-block;
 	background-size: cover;
-} 
+}  
