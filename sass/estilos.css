@@ -75,6 +75,17 @@ strong {
   cursor: pointer;
 }
 
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 250px;
+}
+
+.logoNav {
+  width: 130px;
+  height: 70px;
+}
+
 /* ESTILOS PORTADA */
 .portada {
   display: flex;
@@ -218,22 +229,6 @@ strong {
   box-sizing: border-box;
 }
 
-/* TESTIMONIOS */
-#testimonios {
-  text-align: center;
-}
-
-.sectionMeditacion {
-  display: flex;
-  align-content: center;
-}
-
-.sectionMeditacion p {
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
-}
-
 iframe {
   display: flex;
   flex-direction: column;
@@ -270,6 +265,17 @@ iframe {
 }
 
 /* CURSOS */
+.sectionMeditacion {
+  display: flex;
+  align-content: center;
+}
+
+.sectionMeditacion p {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+}
+
 #tituloReikiLunar {
   text-align: center;
   text-shadow: 0.1em 0.1em 0.1em white;
@@ -491,40 +497,16 @@ iframe {
 .grilla {
   display: flex;
   flex-direction: row;
-  align-content: center;
-  justify-content: space-around;
-  width: 90%;
-  margin: 1.6em auto;
-  gap: 1.6em;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.grilla > .header {
-  background: #fff;
-  padding: 40px;
-  grid-column: 1/-1;
-  background-color: "url(//img/fondoCinco.png)";
-  color: #ffffff;
-}
-
-.grilla > div {
-  background-image: "url(//img/fondoCinco.png)";
-  padding: 40px;
-}
-
-.grilla > .related-post {
-  background: #343759;
-  height: 180px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
 }
 
-.grilla > .related-post:hover {
-  cursor: pointer;
-  color: #000000;
-  background: #3c6382;
+.grilla p {
+  color: #343759;
+}
+
+.youtube {
+  width: 500px;
+  height: 200px;
 }
 
 /* TARJETA DE REGALO */
@@ -1442,16 +1424,5 @@ footer {
   height: 16px;
   display: inline-block;
   background-size: cover;
-}
-
-.logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 250px;
-}
-
-.logoNav {
-  width: 130px;
-  height: 70px;
 }
 /*# sourceMappingURL=estilos.css.map */
