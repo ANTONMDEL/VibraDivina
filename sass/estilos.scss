@@ -346,8 +346,17 @@ iframe {
 #tituloMeditacion{
 	text-align: $center;
 	text-shadow: 0.1em 0.1em 0.1em white;
+	padding-top: 50px;
 	font-size: 39px;
 }
+.linea{
+	border-top: 2px solid $colorAzul;
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 5px auto 0 auto;
+}
+
 #temarioCursoMeditacion{
 	text-align: $center;
 
