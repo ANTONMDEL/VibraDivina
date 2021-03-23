@@ -513,12 +513,24 @@ iframe {
 #regalo {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  flex-direction: row;
+  align-content: flex-start;
+  margin-top: 1px;
   width: 240px;
   float: right;
   height: 400px;
   margin: 1%;
   margin-right: 49px;
+}
+
+.osito {
+  display: flex;
+  flex-direction: row;
+}
+
+#ObteneRegalo {
+  padding: 30px 0px 0px 19px;
+  color: #ecf0f1;
 }
 
 .carro {
@@ -540,7 +552,7 @@ iframe {
 
 .card-logo {
   width: 65px;
-  margin-left: 10px;
+  margin-left: 1px;
 }
 
 .product-detail {
@@ -548,18 +560,19 @@ iframe {
   flex-direction: column;
   justify-content: flex-start;
   align-content: stretch;
-  padding: 0px 20px;
+  padding: 0px 2px;
   font-size: 13px;
-  color: #fff;
+  color: #ecf0f1;
 }
 
 .product-detail h2 {
-  font-size: 17px;
+  width: 160px;
+  align-content: flex-start;
+  font-size: 19px;
   font-weight: 500;
   letter-spacing: 1px;
-  padding-bottom: 0px;
-  padding-left: 50px;
-  padding-top: 0px;
+  padding-top: 27px;
+  padding-left: 0px;
 }
 
 .back-text {
@@ -568,7 +581,8 @@ iframe {
   font-weight: 900;
   margin-left: 10px;
   margin-top: 12px;
-  opacity: 0.1;
+  opacity: 0.2;
+  text-align: center;
 }
 
 .product-title {
