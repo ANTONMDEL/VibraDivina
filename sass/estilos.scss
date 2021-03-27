@@ -234,18 +234,28 @@ height: 70px;
 }
 
 /* GRILLAS BOOTSTRAP INDEX */
-.container {
+.containerDos {
 	background-image: url(../img/fondoCinco.png);
-	text-align: $center;
-	padding: 2px;
-	width: 100%;
-	height: calc(100vh - 55px);
-	background-color: white;
-	font-size: 15px;
+	
 
 	* {
 		box-sizing: border-box;
 	}
+}
+.containerDos a:link {
+	color: #343759;
+  }
+  
+  .containerDos a:visited {
+	color: #343759;
+  }
+  
+  a:active {
+	color: #343759;
+  }
+  
+  a:hover {
+	color: #343759;
 }
 
 
@@ -322,11 +332,16 @@ iframe {
 		margin: 2%;
 	}
 
-	h3 {
-		font-size: 20px;
-	}
+	
 }
 
+.h3 {
+	font-size: 20px;
+}
+.h3__2{
+	align-items: $center;
+	
+}
 #temarioCurso {
 	text-align: $center;
 
@@ -346,7 +361,7 @@ iframe {
 #tituloMeditacion{
 	text-align: $center;
 	text-shadow: 0.1em 0.2em 0.2em white;
-	padding-top: 50px;
+	padding-top: 30px;
 	font-size: 39px;
 
 }
@@ -410,24 +425,24 @@ iframe {
 }
 
 .box {
-	display: flex;
-	justify-content: $center;
-	align-items: $center;
-	height: 150px;
-	width: 150px;
-	border-radius: 30%;
-	animation: 13s infinite alternate ease-in-out spin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    position: relative;
+    margin-right: 35%;
+    width: 100px;
+    top: -30px;
+    border-radius: 30%;
+    animation: 13s infinite alternate ease-in-out spin;
 }
 
 .innerBox {
-	width: 40px;
-	height: 40px;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-	-moz-box-shadow: 20px 5px 0 #f1c40f;
-	-webkit-box-shadow: 20px 5px 0 #f1c40f;
-	box-shadow: 5px 5px 0 #f1c40f;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 5px 5px 0 #f1c40f;
 }
 
 
@@ -728,17 +743,19 @@ iframe {
 
 /* TABLA DE PRECIOS CURSOS */
 .contenedorQ {
-	width: 50%;
-	max-width: 900px;
-	margin: auto;
-	height: 50%;
 	display: flex;
 	flex-direction: row;
 	justify-content: $center;
-	align-items: $center;
-	padding-top: 0px;
-	padding-bottom: 50px;
+	
 }
+
+@media screen and (max-width: 1000px) {
+    .queryBox {
+        zoom: 80%;
+		padding-left: 55px;
+    }
+}
+
 
 .tabla {
 	width: 23%;
@@ -783,7 +800,7 @@ iframe {
 .botonObtene {
 	display: inline-block;
 	width: 100px;
-	padding: 15px;
+	padding: 20px;
 	background: linear-gradient(135deg, #fa782e 8%, #c82930 83%);
 	text-decoration: none;
 	color: $colorAzul;
@@ -869,7 +886,7 @@ a {
 
 }
 .completo__h2{
-		padding-left: 517px;
+		text-align: $center;
 		color: $colorAzul;
 	
 }
@@ -944,6 +961,10 @@ a {
 		text-align: $center;
 		margin-left: 160px;
 	}
+}
+
+.ustedes {
+	margin-left: 22px;
 }
 
 .switch {
@@ -1331,14 +1352,23 @@ a {
 /* Video*/
 .video-container {
 	height: 60vh;
+	width: 100%;
 	position: relative;
 	overflow: hidden;
 
 	@media(min-width: 600px) {
 		height: 100vh;
+		
+
+	}
+	@media(max-width: 1200px) {
+		width: 100%;
+		
 
 	}
 }
+
+
 
 .vi {
 	object-fit: cover; // Set the magic
@@ -1660,11 +1690,12 @@ $timelineAccumulated: ();
 
 
 .globe {
-  margin: 0em 0em 0em 50rem;
   position: relative;
   display: inline-block;
   width: 110px;
   height: 110px;
+
+
 
   .bird {
    .body {
@@ -1758,6 +1789,87 @@ $timelineAccumulated: ();
   }
 }
 
+
+
+@media screen and (max-width:1170px){
+	.lunaLu{
+		margin-right: 31%;
+	}
+}
+
+@media screen and (max-width:970px){
+	.lunaLu{
+		margin-right: 27%;
+	}
+}
+@media screen and (max-width:1000px){
+	.lunaLu{
+		margin-right: 27%;
+	}
+}
+@media screen and (max-width:765px){
+	.lunaLu{
+		margin-right: 20%;
+	}
+}
+
+@media screen and (max-width:695px){
+	.lunaLu{
+		margin-right: 20%;
+	}
+}
+@media screen and (max-width:550px){
+	.lunaLu{
+		margin-right: 17%;
+	}
+}
+
+@media screen and (max-width:499px){
+	.lunaLu{
+		margin-right: 18%;
+	}
+}
+@media screen and (max-width:465px){
+	.lunaLu{
+		margin-right: 14%;
+	}
+}
+@media screen and (max-width:436px){
+	.lunaLu{
+		margin-right: 10%;
+	}
+}
+@media screen and (max-width:420px){
+	.lunaLu{
+		margin-right: 8%;
+	}
+}
+
+@media screen and (max-width:390px){
+	.lunaLu{
+		margin-right: 5%;
+	}
+}
+@media screen and (max-width:360px){
+	.lunaLu{
+		margin-right: 4%;
+	}
+}
+
+@media screen and (max-width:320px){
+	.lunaLu{
+		margin-right: 1%;
+	}
+}
+
+/* LUNA 
+@media screen and (min-width:1000px){
+	.luna{
+		margin-right: 15%;
+	}
+}
+*/
+
 /* FOOTER */
 footer {
 	background-image: url(/Coder/img/fondoCinco.png);
@@ -1787,4 +1899,12 @@ footer {
 }  
 
 
+.cursoMargin{
+	margin-top: 90px;
+}
+
+.bloquesIndex{
+	padding: 0px 5px 0px 5px;
+	
+}
 
