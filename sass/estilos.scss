@@ -1908,3 +1908,183 @@ footer {
 	
 }
 
+
+
+
+
+
+
+
+
+
+
+
+table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        
+@-ms-viewport{ width: device-width; }
+
+@media only screen and (max-width: 639px){
+.wrapper{ width:100%;  padding: 0 !important; }
+}    
+
+@media only screen and (max-width: 480px){ 
+.centerClass{ margin:0 auto !important; }         
+.imgClass{ width:100% !important; height:auto; }    
+.wrapper{ width:320px; padding: 0 !important; }  
+.header{ width:320px; padding: 0 !important; background-image: url(http://placehold.it/320x400) !important; }   
+.container{ width:300px;  padding: 0 !important; }
+.mobile{ width:300px; display:block; padding: 0 !important; text-align:center !important;}
+.mobile50{ width:300px; padding: 0 !important; text-align:center; }
+*[class="mobileOff"] { width: 0px !important; display: none !important; }
+*[class*="mobileOn"] { display: block !important; max-height:none !important; }
+}
+        
+        
+    
+
+/* Slider */
+
+.sliderFallback:hover {opacity:0.85;filter:alpha(opacity=85);}
+
+a#rotator img {
+-webkit-transition: all 1s ease-in-out;
+-moz-transition: all 1s ease-in-out; 
+-o-transition: all 1s ease-in-out; 
+-ms-transition: all 1s ease-in-out; 
+}
+
+a#rotator img:hover { 
+-webkit-transform: rotate(360deg); 
+-moz-transform: rotate(360deg); 
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg); 
+}
+
+.sliderFallback { -webkit-animation: disapear 10s infinite; -moz-animation: disapear 10s infinite; -o-animation: disapear 10s infinite; animation: disapear 10s infinite; }
+
+@-webkit-keyframes disapear {
+	0% {opacity: 0;}
+	100% {opacity: 0;}
+	}
+	
+@-moz-keyframes disapear {
+	0% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@keyframes disapear {
+	0% {opacity: 0;}
+	100% {opacity: 0;}
+	}
+@keyframes disapear {
+	0% {opacity: 0;}
+	100% {opacity: 0;}
+	}
+
+#slider_theme.activeSlider{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	min-height: 100px;
+	height: auto;
+}
+
+#slider_theme.activeSlider .control{
+	position: relative;
+	left: 0px;
+	white-space:nowrap;
+	animation: slider-navigate 10s infinite;
+	-webkit-animation: slider-navigate 10s infinite;
+	-moz-animation: slider-navigate 10s infinite;
+	-o-animation: slider-navigate 10s infinite;
+	animation: slider-navigate 10s infinite;
+	font-size: 0px;
+	width: 100%;
+}
+
+#slider_theme .control img{
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+#slider_theme .control img:first-child{
+	width: 100%;
+}
+
+#slider_theme.activeSlider .control img{
+	-moz-animation: show-width 10s infinite;
+	-webkit-animation: show-width 10s infinite;
+	-o-animation: show-width 10s infinite;
+	animation: show-width 10s infinite;
+}
+
+@keyframes show-width {
+	0%{ width: 25%; max-width: 25%; }
+	100%{ width: 25%; max-width: 25%; }
+}
+
+@-moz-keyframes show-width {
+	0%{ width: 25%; max-width: 25%; }
+	100%{ width: 25%; max-width: 25%; }
+}
+
+@-webkit-keyframes show-width {
+	0%{ width: 25%; max-width: 25%; }
+	100%{ width: 25%; max-width: 25%; }
+}
+
+@-o-keyframes show-width {
+	0%{ width: 25%; max-width: 25%; }
+	100%{ width: 25%; max-width: 25%; }
+}
+
+@keyframes slider-navigate {
+	0%{ left: 0%; display: block; width: 400%; }
+	12%{ left: 0%; }
+	34%{ left: -100%; }
+	46%{ left: -100%; }
+	68%{ left: -200%; }
+	80%{ left: -200%; }
+	100%{ left: 0%;  width: 400%; }
+}
+
+@-webkit-keyframes slider-navigate {
+	0%{ left: 0%; display: block; width: 400%; }
+	12%{ left: 0%; }
+	34%{ left: -100%; }
+	46%{ left: -100%; }
+	68%{ left: -200%; }
+	80%{ left: -200%; }
+	100%{ left: 0%;  width: 400%; }
+}
+
+@-moz-keyframes slider-navigate {
+	0%{ left: 0%; display: block; width: 400%; }
+	12%{ left: 0%; }
+	34%{ left: -100%; }
+	46%{ left: -100%; }
+	68%{ left: -200%; }
+	80%{ left: -200%; }
+	100%{ left: 0%;  width: 400%; }
+}
+
+@-o-keyframes slider-navigate {
+	0%{ left: 0%; display: block; width: 400%; }
+	12%{ left: 0%; }
+	34%{ left: -100%; }
+	46%{ left: -100%; }
+	68%{ left: -200%; }
+	80%{ left: -200%; }
+	100%{ left: 0%;  width: 400%; }
+}
+
+body[yahoo] #slider_theme .control img{
+	display: none;
+}
+
+body[yahoo] #slider_theme .control img:first-child{
+	display: block !important;
+}    
