@@ -556,13 +556,19 @@ iframe {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	p{
+    padding-bottom: 5%;
+	padding-top: 5%;
+	
+	.grilla__texto{
+		font-size: 17px;
+		letter-spacing: 1px;
 		color: $colorAzul;
-	}
+	  
+	  }
 }
 
 .youtube{
-	width: 500px;
+	width: 400px;
 	height: 200px;
 }
 
@@ -734,13 +740,17 @@ iframe {
 	flex-direction: row;
 	justify-content: $center;
 	align-content: $center;
-	width: 60%;
+	width: 90%;
 	padding-top: 1%;
-	padding-left: 61px;
+	padding-left:0px;
 	padding-bottom: 10px;
 	align-content: flex-start;
 }
 
+.a{
+	width: 150%;
+}
+ 
 /* TABLA DE PRECIOS CURSOS */
 .contenedorQ {
 	display: flex;
@@ -1217,6 +1227,7 @@ a {
 
 	50% {
 		left: 0px;
+	
 	}
 
 	60% {
@@ -1791,7 +1802,7 @@ $timelineAccumulated: ();
 
 
 
-@media screen and (max-width:1170px){
+@media screen and (max-width:1188px){
 	.lunaLu{
 		margin-right: 31%;
 	}
@@ -1807,11 +1818,13 @@ $timelineAccumulated: ();
 		margin-right: 27%;
 	}
 }
-@media screen and (max-width:765px){
+@media screen and (max-width:768px){
 	.lunaLu{
-		margin-right: 20%;
+		margin-right: 23%;
 	}
 }
+
+
 
 @media screen and (max-width:695px){
 	.lunaLu{
@@ -1841,25 +1854,26 @@ $timelineAccumulated: ();
 }
 @media screen and (max-width:420px){
 	.lunaLu{
-		margin-right: 8%;
+		margin-right: -5%;
 	}
 }
 
 @media screen and (max-width:390px){
 	.lunaLu{
-		margin-right: 5%;
+		margin-right: -5%;
 	}
 }
 @media screen and (max-width:360px){
 	.lunaLu{
-		margin-right: 4%;
+		margin-right:-5%;
 	}
 }
 
 @media screen and (max-width:320px){
 	.lunaLu{
-		margin-right: 1%;
+		margin-right: -5%;
 	}
+
 }
 
 /* LUNA 
@@ -1900,7 +1914,8 @@ footer {
 
 
 .cursoMargin{
-	margin-top: 90px;
+    margin: 60px;
+
 }
 
 .bloquesIndex{
@@ -1915,7 +1930,7 @@ footer {
 
 
 
-
+/* testimo */
 
 
 
@@ -2000,7 +2015,10 @@ a#rotator img:hover {
 	animation: slider-navigate 10s infinite;
 	font-size: 0px;
 	width: 100%;
+	
 }
+
+
 
 #slider_theme .control img{
 	margin: 0px;
@@ -2012,6 +2030,7 @@ a#rotator img:hover {
 
 #slider_theme .control img:first-child{
 	width: 100%;
+	
 }
 
 #slider_theme.activeSlider .control img{
@@ -2088,3 +2107,16 @@ body[yahoo] #slider_theme .control img{
 body[yahoo] #slider_theme .control img:first-child{
 	display: block !important;
 }    
+
+.mobileOff{
+height: 100px;
+display:block; 
+}
+
+.tablete{
+	height: 60%;
+	margin-bottom: 10%;
+	width: 100%;
+}
+ 
+
