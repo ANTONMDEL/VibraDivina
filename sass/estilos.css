@@ -1541,6 +1541,35 @@ textarea:focus ~ .barra::before {
 	}
 }
 */
+/* FOOTER */
+footer {
+  background-image: url(/Coder/img/fondoCinco.png);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.lista li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.lista a {
+  text-decoration: none;
+  color: #343759;
+}
+
+.lista a:hover {
+  color: #b33771;
+}
+
+.icono {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+}
+
 .cursoMargin {
   margin: 60px;
 }
@@ -1735,34 +1764,5 @@ body[yahoo] #slider_theme .control img:first-child {
   height: 60%;
   margin-bottom: 10%;
   width: 100%;
-}
-
-/* FOOTER */
-footer {
-  background-image: url(/Coder/img/fondoCinco.png);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.lista li {
-  display: inline-block;
-  margin: 5px;
-}
-
-.lista a {
-  text-decoration: none;
-  color: #343759;
-}
-
-.lista a:hover {
-  color: #b33771;
-}
-
-.icono {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  background-size: cover;
 }
 /*# sourceMappingURL=estilos.css.map */
