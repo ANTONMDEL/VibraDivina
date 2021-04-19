@@ -5,3 +5,4 @@ function Cursos ( nombre , costo , duracion) {
     this.bienvenida = function () { console.log("El usuario esta interesado en el curso de "+ this.nombre)   }
 }
 
+    
