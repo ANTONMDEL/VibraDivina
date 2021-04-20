@@ -1,3 +1,4 @@
+
 const usuario1 = {
     id: 1,
     user: "Marco",
@@ -79,4 +80,28 @@ let name = localStorage.getItem('nombre');
 let aye = localStorage.getItem('edad');
 console.log(typeof eye);
 console.log(typeof  nombre);
+
+
+//DOM
+let ingresoDatos= document.getElementById("ObteneRegalo")
+
+let nuevaEtiqueta = document.createElement("p")
+
+nuevaEtiqueta.innerHTML = " <p>Dale, hace click</p>" ;
+
+ingresoDatos.appendChild(nuevaEtiqueta);
+
+let mensajeNuevo =  document.getElementById("mensaje") 
+mensajeNuevo.value = "Que mensaje, nos quieres enviar ? "
+
+
+
+
+let probando = document.getElementById("evento");
+  probando.addEventListener("click", eventoCo)
+  function eventoCo (){
+      console.log("Hizo click");
+  }
+
+
 

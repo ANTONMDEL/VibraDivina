@@ -54,16 +54,16 @@
     <img id="avatar" src="../img/avatar.jpg" />
     <h2> Marco De Luca </h2>
     <form action="">
-      <label for="name">Nombre</label><br>
-      <input type="text" name="name"><br>
+      <label for="name" >Nombre</label><br>
+      <input  id="user" type="text" name="name"><br>
       <br>
-      <label for="apellido">Apellido</label><br>
+      <label for="telefono">Telefono</label><br>
       <input type="text" name="Apellido"><br>
       <br>
       <label for="mail">Mail</label><br>
       <input type="email" name="mail"><br>
       <br>
-      <button href="" class="botonPerfil">Guardar cambios</button>
+      <button href="" class="botonPerfil" id="login" onclick="salvarUser()">Inciar sesion</button>
     </form>
   </div>
 
@@ -96,6 +96,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
     integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
   </script>
+        <script src="../Javascript/objects.js"></script>
+        <script src="../Javascript/app.js"></script>
 </body>
 
 </html>
