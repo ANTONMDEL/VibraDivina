@@ -72,30 +72,6 @@ console.log(Registros.duracion);
 Registros.bienvenida();
 
 
-//Practica Local y Session storage
-localStorage.setItem('nombre', "Marco")
-localStorage.setItem('edad', 19);
-
-let name = localStorage.getItem('nombre');
-let aye = localStorage.getItem('edad');
-console.log(typeof eye);
-console.log(typeof  nombre);
-
-
-//DOM
-let ingresoDatos= document.getElementById("ObteneRegalo")
-
-let nuevaEtiqueta = document.createElement("p")
-
-nuevaEtiqueta.innerHTML = " <p>Dale, hace click</p>" ;
-
-ingresoDatos.appendChild(nuevaEtiqueta);
-
-let mensajeNuevo =  document.getElementById("mensaje") 
-mensajeNuevo.value = "Que mensaje, nos quieres enviar ? "
-
-
-
 
 let probando = document.getElementById("evento");
   probando.addEventListener("click", eventoCo)
@@ -104,4 +80,15 @@ let probando = document.getElementById("evento");
   }
 
 
+// Al ingresar mis datos en profile.html se carga al button del inicio " Perfil" mi nombre de usuario.(en caso de no ser null)
+ const usernav = document.getElementById("usuario");
+
+ let username = localStorage.getItem('user');
+
+ if (username != null) {
+     usernav.innerHTML = '<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>'
+
+ } else {
+     usernav.innerHTML = ' <a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>';
+ }
 
