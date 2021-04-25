@@ -1,4 +1,3 @@
-
 const usuario1 = {
     id: 1,
     user: "Marco",
@@ -24,16 +23,14 @@ const array = [usuario1, usuario2, usuario3];
 
 const usuario4 = {
     id: 4,
-    user: " ",
+    user: " Carlos ",
     puntos: 300,
-    curso: " ",
+    curso: "Meditacion ",
     pago: false,
 }
-usuario4.user = prompt("ingresa nombre");
-usuario4.curso= prompt("ingresa curso");
 
 array.push(usuario4);
-console.log('la cantidad de usuarios es de '+ ' ' + array.length);
+console.log('la cantidad de usuarios es de ' + ' ' + array.length);
 
 
 function pagoss(array) {
@@ -42,7 +39,7 @@ function pagoss(array) {
         if (valor.pago == false) {
             console.log(valor.user + " ," + "NO pago");
         } else {
-             console.log(valor.user + " ," + "SI pago")
+            console.log(valor.user + " ," + "SI pago")
         }
     }
 }
@@ -72,23 +69,22 @@ console.log(Registros.duracion);
 Registros.bienvenida();
 
 
-
 let probando = document.getElementById("evento");
-  probando.addEventListener("click", eventoCo)
-  function eventoCo (){
-      console.log("Hizo click");
-  }
+probando.addEventListener("click", eventoCo)
+
+function eventoCo() {
+    console.log("Hizo click");
+}
 
 
 // Al ingresar mis datos en profile.html se carga al button del inicio " Perfil" mi nombre de usuario.(en caso de no ser null)
- const usernav = document.getElementById("usuario");
+const usernav = document.getElementById("usuario");
 
- let username = localStorage.getItem('user');
+let username = localStorage.getItem('user');
 
- if (username != null) {
-     usernav.innerHTML = '<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>'
+if (username != null) {
+    usernav.innerHTML = '<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>'
 
- } else {
-     usernav.innerHTML = ' <a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>';
- }
-
+} else {
+    usernav.innerHTML = ' <a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>';
+}
