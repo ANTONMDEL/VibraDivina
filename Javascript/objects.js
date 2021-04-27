@@ -9,7 +9,6 @@ function Cursos(nombre, costo, duracion) {
 
 
 //Nombre de usuario
-
 const userNom = document.getElementById("user");
 const form = document.getElementById("login");
 const telefono = document.getElementById("tel");
@@ -41,11 +40,15 @@ form.addEventListener("submit", function (event) {
     localStorage.setItem("login", JSON.stringify(datos));
 
 });
-
 var dp = JSON.parse(localStorage.getItem("login"))
 
-if (dp != null) {
-    userNom.value = dp.nombre
-    telefono.value = dp.telep
-    mail.value = dp.mail
+function devolverDatos() {
+    if (dp != null) {
+        userNom.value = dp.nombre
+        telefono.value = dp.telep
+        mail.value = dp.mail
+    }
 }
+devolverDatos();
+
+

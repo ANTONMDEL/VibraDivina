@@ -88,3 +88,27 @@ if (username != null) {
 } else {
     usernav.innerHTML = ' <a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>';
 }
+
+
+const message = document.getElementById("mensaje");
+const envio = document.getElementById("dato");
+
+dato.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let men ={
+        mensa : message.value,
+    }
+
+localStorage.setItem('nuevo', JSON.stringify(men));
+
+});
+
+let newMessage = JSON.parse(localStorage.getItem('nuevo'));
+function envioMensaje (){
+
+    if (newMessage != null){
+        message.value= newMessage.mensa
+    }
+}
+
+envioMensaje();
