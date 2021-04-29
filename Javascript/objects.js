@@ -9,22 +9,22 @@ function Cursos(nombre, costo, duracion) {
 
 
 //Nombre de usuario
-const userNom = document.getElementById("user");
-const form = document.getElementById("login");
-const telefono = document.getElementById("tel");
-const mail = document.getElementById("mail");
+const userNom = $("#user");
+const form = $("#login");
+const telefono = $("#tel");
+const mail = $("#mail");
 
 form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-    let user = document.getElementById("user").value;
+    let user = $("#user").value;
 
     localStorage.setItem('user', user);
 
     console.log(user)
 
-    document.getElementById("mostrarNombre").innerHTML = user
+    document.$("#mostrarNombre").innerHTML = user
 
 });
 

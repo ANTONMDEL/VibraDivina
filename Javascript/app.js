@@ -73,12 +73,12 @@ let probando = document.getElementById("evento");
 probando.addEventListener("click", eventoCo)
 
 function eventoCo() {
-    console.log("Hizo click");
+    console.log("Envio mensaje, mira el localStorage");
 }
 
 
 // Al ingresar mis datos en profile.html se carga al button del inicio " Perfil" mi nombre de usuario.(en caso de no ser null)
-const usernav = document.getElementById("usuario");
+const usernav = $("#usuario");
 
 let username = localStorage.getItem('user');
 
@@ -89,7 +89,7 @@ if (username != null) {
     usernav.innerHTML = ' <a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>';
 }
 
-
+// Datos del formulario del index.
 const message = document.getElementById("mensaje");
 const envio = document.getElementById("dato");
 
