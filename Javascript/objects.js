@@ -9,44 +9,46 @@ function Cursos(nombre, costo, duracion) {
 
 
 //Nombre de usuario
+
 const userNom = $("#user");
 const form = $("#login");
 const telefono = $("#tel");
 const mail = $("#mail");
 
-form.addEventListener("submit", function (event) {
+
+form.submit( function (event) {
 
     event.preventDefault();
 
-    let user = $("#user").value;
+    let user = $("#user").val();
 
     localStorage.setItem('user', user);
 
     console.log(user)
 
-    document.$("#mostrarNombre").innerHTML = user
+    $(document).$("#mostrarNombre").prepend = user
 
 });
 
 //Guardo datos ingresados del usuario. 
-form.addEventListener("submit", function (event) {
+form.submit( function (event) {
     event.preventDefault();
 
     let datos = {
-        nombre: userNom.value,
-        telep: telefono.value,
-        mail: mail.value,
+        nombre: userNom.val(),
+        telep: telefono.val(),
+        mail: mail.val(),
     }
-    localStorage.setItem("login", JSON.stringify(datos));
+    localStorage.setItem("login", JSON.stringify(datos)); 
 
 });
 var dp = JSON.parse(localStorage.getItem("login"))
 
 function devolverDatos() {
     if (dp != null) {
-        userNom.value = dp.nombre
-        telefono.value = dp.telep
-        mail.value = dp.mail
+        userNom.val() = dp.nombre
+        telefono.val() = dp.telep
+        mail.val() = dp.mail
     }
 }
 devolverDatos();

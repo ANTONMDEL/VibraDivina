@@ -46,7 +46,7 @@ function pagoss(array) {
 pagoss(array);
 
 
-
+/*
 // ENTREGA 5 OBJETOS  
 
 const Reiki = new Cursos("Reiki", 300, 3);
@@ -74,7 +74,7 @@ probando.addEventListener("click", eventoCo)
 
 function eventoCo() {
     console.log("Envio mensaje, mira el localStorage");
-}
+} */
 
 
 // Al ingresar mis datos en profile.html se carga al button del inicio " Perfil" mi nombre de usuario.(en caso de no ser null)
@@ -83,20 +83,21 @@ const usernav = $("#usuario");
 let username = localStorage.getItem('user');
 
 if (username != null) {
-    usernav.innerHTML = '<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>'
+    usernav.prepend('<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>') 
 
 } else {
-    usernav.innerHTML = ' <a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>';
+    usernav.prepend('<a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>');
 }
 
-// Datos del formulario del index.
-const message = document.getElementById("mensaje");
-const envio = document.getElementById("dato");
 
-dato.addEventListener("submit", function (event) {
+// Datos del formulario del index.
+const message = $("#mensaje");
+const envio = $("#dato");
+
+envio.submit( function (event) {
     event.preventDefault();
     let men ={
-        mensa : message.value,
+        mensa : message.val(),
     }
 
 localStorage.setItem('nuevo', JSON.stringify(men));
@@ -107,8 +108,8 @@ let newMessage = JSON.parse(localStorage.getItem('nuevo'));
 function envioMensaje (){
 
     if (newMessage != null){
-        message.value= newMessage.mensa
+        message.val()= newMessage.mensa
     }
 }
 
-envioMensaje();
+envioMensaje();  
