@@ -113,3 +113,11 @@ function envioMensaje (){
 }
 
 envioMensaje();  
+
+
+//Animation Jquery
+let alert = $("#alertaIndex");
+
+alert.css("display", "none")
+    .delay(100)
+    .slideDown(2000);

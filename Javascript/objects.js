@@ -9,48 +9,49 @@ function Cursos(nombre, costo, duracion) {
 
 
 //Nombre de usuario
+const userNom = document.getElementById("user");
+const form = document.getElementById("login");
+const telefono = document.getElementById("tel");
+const mail = document.getElementById("mail");
 
-const userNom = $("#user");
-const form = $("#login");
-const telefono = $("#tel");
-const mail = $("#mail");
-
-
-form.submit( function (event) {
+form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-    let user = $("#user").val();
+    let user = document.getElementById("user").value;
 
     localStorage.setItem('user', user);
 
     console.log(user)
 
-    $(document).$("#mostrarNombre").prepend = user
+    document.getElementById("mostrarNombre").innerHTML = user
 
 });
 
 //Guardo datos ingresados del usuario. 
-form.submit( function (event) {
+form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     let datos = {
-        nombre: userNom.val(),
-        telep: telefono.val(),
-        mail: mail.val(),
+        nombre: userNom.value,
+        telep: telefono.value,
+        mail: mail.value,
     }
-    localStorage.setItem("login", JSON.stringify(datos)); 
+    localStorage.setItem("login", JSON.stringify(datos));
 
 });
 var dp = JSON.parse(localStorage.getItem("login"))
 
 function devolverDatos() {
     if (dp != null) {
-        userNom.val() = dp.nombre
-        telefono.val() = dp.telep
-        mail.val() = dp.mail
+        userNom.value = dp.nombre
+        telefono.value = dp.telep
+        mail.value = dp.mail
     }
 }
 devolverDatos();
+
+
+
 
 
