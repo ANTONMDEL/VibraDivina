@@ -1,0 +1,26 @@
+[
+  
+    {
+        "id": 1,
+        "user": "Marco",
+        "puntos": 750,
+        "curso": "meditacion",
+        "pago": true
+    },
+   
+    {
+        "id": 2,
+        "user": "Soledad ",
+        "puntos": 50,
+        "curso": "reiki",
+        "pago": false
+    },
+      {
+        "id": 3,
+        "user": "Alejandro ",
+        "puntos": 600,
+        "curso": "registros",
+        "pago": true
+    }
+
+]

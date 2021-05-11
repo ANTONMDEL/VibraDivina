@@ -83,7 +83,7 @@ const usernav = $("#usuario");
 let username = localStorage.getItem('user');
 
 if (username != null) {
-    usernav.prepend('<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>') 
+    usernav.prepend('<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>')
 
 } else {
     usernav.prepend('<a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>');
@@ -94,25 +94,26 @@ if (username != null) {
 const message = $("#mensaje");
 const envio = $("#dato");
 
-envio.submit( function (event) {
+envio.submit(function (event) {
     event.preventDefault();
-    let men ={
-        mensa : message.val(),
+    let men = {
+        mensa: message.val(),
     }
 
-localStorage.setItem('nuevo', JSON.stringify(men));
+    localStorage.setItem('nuevo', JSON.stringify(men));
 
 });
 
 let newMessage = JSON.parse(localStorage.getItem('nuevo'));
-function envioMensaje (){
 
-    if (newMessage != null){
-        message.val()= newMessage.mensa
+function envioMensaje() {
+
+    if (newMessage != null) {
+        message.value = newMessage.mensa
     }
 }
 
-envioMensaje();  
+envioMensaje();
 
 
 //Animation Jquery
@@ -120,4 +121,59 @@ let alert = $("#alertaIndex");
 
 alert.css("display", "none")
     .delay(100)
-    .slideDown(2000);
+    .slideDown(3000);
+
+
+//Juego de elegir frase
+var frases = document.getElementById('frase');
+
+function tirarFrase() {
+    //generar un numero aleatorio
+    var numeroAleatorio = Math.random();
+    var numeroMultiplicado = (numeroAleatorio * 5) + 1;
+    var numero = Math.round(numeroMultiplicado);
+    //mostrar en el figure la imagen del dado
+    if (numero == 1) {
+        frases.innerHTML = '<img src="../img/FraseCuatro.jpg">';
+    } else if (numero == 2) {
+        frases.innerHTML = '<img src="img/FraseCinco.jpg">';
+    } else if (numero == 3) {
+        frases.innerHTML = '<img src="img/fraseNueve.jpg">';
+    } else if (numero == 4) {
+        frases.innerHTML = '<img src="img/fraseOcho.png">';
+    } else if (numero == 5) {
+        frases.innerHTML = '<img src="img/FraseSeis.jpg">';
+    } else {
+        frases.innerHTML = '<img src="img/FraseSiete.jpg">';
+    }
+
+}
+tirarFrase();
+
+
+
+
+// Probando como quitar valores repetidos de un array con objetos SET 
+let nu = [1, 2, 1, 2, 1, 21, 2]
+
+const nuevo = new Set(nu)
+let nuevosNumeros = [...nuevo];
+
+console.log(nuevosNumeros)
+
+
+const IMG_JSON= "Javascript/data.json"
+
+$('#hola').click(()=>{
+    $.get(IMG_JSON, function(respuesta,estado){
+        if (estado === "success"){
+            let data = respuesta;
+            for (const dato of data) {
+                $('#gracias').prepend(` <div class="modal-body">Gracias por tu compra ${dato.user} </div>`)
+            }
+        }
+    }
+)
+}
+
+)

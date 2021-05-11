@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800;900&family=Oi&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="contenido" content="Curso de reiki Buenos Aires, Argentina">
     <meta name="keywords"
         content="curso, reiki, reiki lunar, buenos aires , argentina, uruguay, barato, meditacion, registros akashicos, reiki de la mujer, luna, sanacion, paz, relax">
@@ -39,7 +40,7 @@
                 <div class="boton">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid ">
-                            <a class="navbar-brand btn logoNav" href="index.html"><img class="logo"
+                            <a class=" animate__animated animate__swing navbar-brand btn logoNav" href="index.html"><img class="logo"
                                     src="img/LogoVibraSeis.png" alt=""> </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -85,11 +86,15 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
-                <section class="a">
-                    <video class="videoIndex" src="" autoplay controls muted="muted"></video>
-                </section>
+            <div id="juego" class="col-md-6">           
+    <h3>Elegí TU frase del dia</h3>
+    <figure id="frase"></figure>
+      <button onclick="tirarFrase()" id="botonFrase" type="button" class="btn btn-primary product-price">
+      <b>Elegir</b>
+  </button>
+        
             </div>
+            
             <div class="col">
                 <aside id="regalo">
                     <div class="carro">
@@ -125,7 +130,7 @@
                                 </span>
                             </div>
                             <br>
-                            <button type="button" class="btn btn-primary product-price" data-bs-toggle="modal"
+                            <button id="hola" type="button" class="btn btn-primary product-price" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
                                 Click<b>aqui</b>
                             </button>
@@ -138,8 +143,8 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">
-                                            Gracias por tu compra
+                                        <div id="gracias" class="modal-body">
+                                            <!-- Gracias por tu compra -->
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
@@ -220,7 +225,7 @@
 
         <div class="row">
             <section class="video-container">
-                <video class="vi" src="../PruebaSas/Videos/videoTres.mp4" autoplay loop playsinline muted></video>
+                <video class="vi" src="Videos/videoTres.mp4" autoplay loop playsinline muted></video>
                 <div class="callout">
                     <h1 id="fit">Vibra con tu naturaleza</h1>
                 </div>

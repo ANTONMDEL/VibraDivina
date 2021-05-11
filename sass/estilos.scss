@@ -2120,3 +2120,16 @@ display:block;
 }
 
 
+#juego{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 15%;
+}
+
+#botonFrase{
+	width: 25%;
+	height: 5%;
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
