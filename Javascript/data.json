@@ -1,5 +1,5 @@
 [
-  
+
     {
         "id": 1,
         "user": "Marco",
@@ -7,7 +7,7 @@
         "curso": "meditacion",
         "pago": true
     },
-   
+
     {
         "id": 2,
         "user": "Soledad ",
@@ -15,7 +15,7 @@
         "curso": "reiki",
         "pago": false
     },
-      {
+    {
         "id": 3,
         "user": "Alejandro ",
         "puntos": 600,

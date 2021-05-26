@@ -46,51 +46,24 @@ function pagoss(array) {
 pagoss(array);
 
 
-/*
-// ENTREGA 5 OBJETOS  
-
-const Reiki = new Cursos("Reiki", 300, 3);
-console.log(Reiki.nombre);
-console.log(Reiki.costo);
-console.log(Reiki.duracion);
-Reiki.bienvenida();
-
-const Meditacion = new Cursos("Meditacion", 500, 6);
-console.log(Meditacion.nombre);
-console.log(Meditacion.costo);
-console.log(Meditacion.duracion);
-Meditacion.bienvenida();
-
-
-const Registros = new Cursos("Registros", 600, 8);
-console.log(Registros.nombre);
-console.log(Registros.costo);
-console.log(Registros.duracion);
-Registros.bienvenida();
-
-
-let probando = document.getElementById("evento");
-probando.addEventListener("click", eventoCo)
-
-function eventoCo() {
-    console.log("Envio mensaje, mira el localStorage");
-} */
-
-
 // Al ingresar mis datos en profile.html se carga al button del inicio " Perfil" mi nombre de usuario.(en caso de no ser null)
 const usernav = $("#usuario");
 
 let username = localStorage.getItem('user');
 
-if (username != null) {
-    usernav.prepend('<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>')
+function nameUser() {
+    if (username != null) {
+        usernav.prepend('<a class="nav-link active " id="usuario" href="paginas/profile.html">' + username + '</a>')
 
-} else {
-    usernav.prepend('<a class="nav-link active "  id="usuario" href="paginas/profile.html">Perfil</a>');
+    } else {
+        usernav.prepend('<a class="nav-link active "  id="usuario" href="paginas/profile.html"></a>');
+    }
 }
+nameUser();
 
 
-// Datos del formulario del index.
+
+// Recepcion de informacion del formulario del index.
 const message = $("#mensaje");
 const envio = $("#dato");
 
@@ -124,6 +97,7 @@ alert.css("display", "none")
     .slideDown(3000);
 
 
+
 //Juego de elegir frase
 var frases = document.getElementById('frase');
 
@@ -134,7 +108,7 @@ function tirarFrase() {
     var numero = Math.round(numeroMultiplicado);
     //mostrar en el figure la imagen del dado
     if (numero == 1) {
-        frases.innerHTML = '<img src="../img/FraseCuatro.jpg">';
+        frases.innerHTML = '<img src="img/FraseCuatro.jpg">';
     } else if (numero == 2) {
         frases.innerHTML = '<img src="img/FraseCinco.jpg">';
     } else if (numero == 3) {
@@ -151,29 +125,26 @@ function tirarFrase() {
 tirarFrase();
 
 
-
-
-// Probando como quitar valores repetidos de un array con objetos SET 
-let nu = [1, 2, 1, 2, 1, 21, 2]
+// Probando como quitar valores repetidos de un array con objeto SET 
+let nu = [1, 2, 1, 2, 1, 21, 2];
 
 const nuevo = new Set(nu)
 let nuevosNumeros = [...nuevo];
 
-console.log(nuevosNumeros)
+console.log(nuevosNumeros);
 
 
-const IMG_JSON= "Javascript/data.json"
-
-$('#hola').click(()=>{
-    $.get(IMG_JSON, function(respuesta,estado){
-        if (estado === "success"){
-            let data = respuesta;
-            for (const dato of data) {
-                $('#gracias').prepend(` <div class="modal-body">Gracias por tu compra ${dato.user} </div>`)
+// Datos del Json
+const IMG_JSON = "Javascript/data.json"
+$('#hola').click(() => {
+        $.get(IMG_JSON, function (respuesta, estado) {
+            if (estado === "success") {
+                let data = respuesta;
+                for (const dato of data) {
+                    $('#gracias').prepend(` <div class="modal-body">Gracias por tu compra ${dato.user} </div>`)
+                }
             }
-        }
+        })
     }
-)
-}
 
-)
+);
